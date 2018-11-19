@@ -1,5 +1,7 @@
-import places from "../../../data/alexandermcqueen";
-import termsJson from "../../../data/terms";
+// import places from "../../../data/alexandermcqueen";
+// import termsJson from "../../../data/terms";
+
+import axios from 'axios';
 
 const state = {
   all: [],
@@ -22,24 +24,17 @@ const getters = {
 const actions = {
   getCountries({ commit }) {
     commit("apiPending");
-
-    commit("receiveNations", termsJson);
+    // eslint-disable-next-line prettier/prettier
+    axios.get("http://localhost:5000/api/list").then(r => r.data).then(data => {
+        commit("receiveNations", data.data.countries);
+      });
   },
   getAllStores({ commit }) {
     commit("apiPending");
-
-    commit(
-      "receiveAll",
-      places.sort((a, b) => (a.post_title < b.post_title ? -1 : 1))
-    );
-    // return fetch("../../../data/store-locator.json")
-    //   .then(r => r.json())
-    //   .then(json => {
-    //     commit("receiveAll", json);
-    //   })
-    //   .catch(e => {
-    //     commit("apiFailure", e);
-    //   });
+    // eslint-disable-next-line prettier/prettier
+    axios.get("http://localhost:5000/api/list").then(r => r.data).then(data => {
+        commit("receiveAll", data.data.stores);
+      });
   },
   selectStore({ commit }, { id }) {
     commit("selectStore", id);

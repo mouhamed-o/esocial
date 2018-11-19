@@ -1,5 +1,5 @@
 module.exports = {
-  baseUrl: "/stores-map-vue/",
+  baseUrl: "/",
   outputDir: undefined,
   assetsDir: undefined,
   runtimeCompiler: undefined,
