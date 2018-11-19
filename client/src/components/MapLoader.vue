@@ -1,17 +1,19 @@
 <template>
-  <div class="map-container">
-    <stores-list 
+<b-container class="map-container">
+  <b-row>
+        <b-col col lg="3"><stores-list 
       :selectStore="selectStore"
       :selectCountry="selectCountry" 
-    />
-    <div id="map"></div>
+    /></b-col>
+        <b-col cols="9" ><div id="map"></div>
     <template v-if="!!this.google && !!this.map">
       <slot
         :google="google"
         :map="map"
       />
-    </template>
-  </div>
+    </template></b-col>
+    </b-row>
+</b-container>
 </template>
 
 <script>
