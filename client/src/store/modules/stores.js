@@ -64,7 +64,6 @@ const mutations = {
     state.selectedStoreId = id;
   }
 };
-
 export default {
   namespaced: true,
   state,
@@ -72,7 +71,6 @@ export default {
   actions,
   mutations
 };
-
 const terms = terms =>
   terms.map(term => term).reduce(
     (acc, cur) => {
