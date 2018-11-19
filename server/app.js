@@ -15,7 +15,7 @@ app.get('/api/list', (req, res) => {
         data: db
     })
 });
-const PORT = 5000;
+const PORT = 9938;
 
 app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`)
