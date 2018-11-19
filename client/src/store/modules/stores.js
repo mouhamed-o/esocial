@@ -1,7 +1,4 @@
-// import places from "../../../data/alexandermcqueen";
-// import termsJson from "../../../data/terms";
-
-import axios from 'axios';
+import axios from "axios";
 
 const state = {
   all: [],
