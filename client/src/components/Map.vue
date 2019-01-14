@@ -1,7 +1,7 @@
 <template>
   <map-loader 
     :map-config="mapConfig"
-    apiKey="AIzaSyBNzPxDEDzlMCA9cedItIPCwtbdk037BGg">
+    apiKey="AIzaSyALLXtbgLioQJZiVfjuPYeQ2JENArM6mk8">
     <template slot-scope="scopeProps">
       <child-marker 
         v-for="(marker,i) in markers"
