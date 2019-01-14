@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       mapConfig: {
-        zoom: 4,
+        zoom: 3,
         center: {
           lat: 51,
           lng: 0
@@ -36,7 +36,6 @@ export default {
   computed: {
     markers() {
       return this.stores
-        // .filter(obj => obj.lat !== "" && obj.lng !== "")
         .reduce(function(accumulator, currentValue) {
           return accumulator.concat({
             lat: parseFloat(currentValue.lat),
