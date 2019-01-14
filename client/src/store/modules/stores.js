@@ -22,14 +22,14 @@ const actions = {
   getCountries({ commit }) {
     commit("apiPending");
     // eslint-disable-next-line prettier/prettier
-    axios.get("https://localhost:9938/api/list").then(r => r.data).then(data => {
+    axios.get("http://localhost:9938/api/list").then(r => r.data).then(data => {
         commit("receiveNations", data.data.countries);
       });
   },
   getAllStores({ commit }) {
     commit("apiPending");
     // eslint-disable-next-line prettier/prettier
-    axios.get("https://localhost:9938/api/list").then(r => r.data).then(data => {
+    axios.get("http://localhost:9938/api/list").then(r => r.data).then(data => {
         commit("receiveAll", data.data.stores);
       });
   },
